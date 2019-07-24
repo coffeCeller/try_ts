@@ -1,3 +1,4 @@
+"use strict";
 // // enum P { name = 'chen', age = 18 }
 // // console.log(P.name);
 // // function getHero(age: number, type?: string): string {
@@ -75,16 +76,49 @@
 // console.log(fn());
 // enum person { age, name }
 // console.log(person.age);
-var Car = /** @class */ (function () {
-    function Car(engine) {
+class Car {
+    constructor(engine) {
         this.engine = engine;
     }
-    Car.prototype.getDis = function (word) {
+    getDis(word) {
         return '关键字' + word;
-    };
-    return Car;
-}());
+    }
+}
 var newCar = new Car('auto');
 console.log(newCar.engine);
-var dis = newCar.getDis('cc');
+let dis = newCar.getDis('cc');
 console.log(dis);
+// class quanjia {
+//   // dian: string;
+//   // constructor(dian: string) {
+//   //   this.dian = dian
+//   // };
+//   static getName(str: number): string {
+//     return '吊用了getname的' + str
+//   }
+//   get est() {
+//     return 'getValue'
+//   }
+//   set est(val) {
+//     console.log('has no admin');
+//   }
+// }
+// let getQuan = new quanjia()
+// // console.log(quanjia.getName(1));
+// console.log(quanjia.est)
+class MyClass {
+    constructor() {
+        // ...
+    }
+    get prop() {
+        return 'getter';
+    }
+    set prop(value) {
+        console.log('setter: ' + value);
+    }
+}
+let inst = new MyClass();
+inst.prop = '12';
+// setter: 123
+console.log(inst.prop);
+// 'getter'

@@ -85,19 +85,60 @@
 
 // enum person { age, name }
 // console.log(person.age);
-class Car {
-  engine: string;
-  constructor(engine: string) {
-    this.engine = engine
-  }
-  getDis(word: string): string {
-    return '关键字' + word
-  }
-}
-var newCar = new Car('auto')
-console.log(newCar.engine);
-let dis: string = newCar.getDis('cc')
-console.log(dis);
+// class Car {
+//   engine: string;
+//   constructor(engine: string) {
+//     this.engine = engine
+//   }
+//   getDis(word: string): string {
+//     return '关键字' + word
+//   }
+// }
+// var newCar = new Car('auto')
+// console.log(newCar.engine);
+// let dis: string = newCar.getDis('cc')
+// console.log(dis);
+
+// // class quanjia {
+// //   // dian: string;
+// //   // constructor(dian: string) {
+// //   //   this.dian = dian
+// //   // };
+// //   static getName(str: number): string {
+// //     return '吊用了getname的' + str
+// //   }
+// //   get est() {
+// //     return 'getValue'
+// //   }
+// //   set est(val) {
+// //     console.log('has no admin');
+
+// //   }
+// // }
+// // let getQuan = new quanjia()
+// // // console.log(quanjia.getName(1));
+// // console.log(quanjia.est)
+
+// class MyClass {
+//   constructor() {
+//     // ...
+//   }
+//   get prop() {
+//     return 'getter';
+//   }
+//   set prop(value) {
+//     console.log('setter: ' + value);
+//   }
+// }
+
+// let inst = new MyClass();
+
+// inst.prop = '12';
+// // setter: 123
+
+// console.log(inst.prop);
+
+// // 'getter'
 
 
 
