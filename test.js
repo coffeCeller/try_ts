@@ -1,4 +1,3 @@
-"use strict";
 // // enum P { name = 'chen', age = 18 }
 // // console.log(P.name);
 // // function getHero(age: number, type?: string): string {
@@ -76,49 +75,89 @@
 // console.log(fn());
 // enum person { age, name }
 // console.log(person.age);
-class Car {
-    constructor(engine) {
-        this.engine = engine;
-    }
-    getDis(word) {
-        return '关键字' + word;
-    }
-}
-var newCar = new Car('auto');
-console.log(newCar.engine);
-let dis = newCar.getDis('cc');
-console.log(dis);
-// class quanjia {
-//   // dian: string;
-//   // constructor(dian: string) {
-//   //   this.dian = dian
-//   // };
-//   static getName(str: number): string {
-//     return '吊用了getname的' + str
+// class Car {
+//   engine: string;
+//   constructor(engine: string) {
+//     this.engine = engine
 //   }
-//   get est() {
-//     return 'getValue'
-//   }
-//   set est(val) {
-//     console.log('has no admin');
+//   getDis(word: string): string {
+//     return '关键字' + word
 //   }
 // }
-// let getQuan = new quanjia()
-// // console.log(quanjia.getName(1));
-// console.log(quanjia.est)
-class MyClass {
-    constructor() {
-        // ...
+// var newCar = new Car('auto')
+// console.log(newCar.engine);
+// let dis: string = newCar.getDis('cc')
+// console.log(dis);
+// // class quanjia {
+// //   // dian: string;
+// //   // constructor(dian: string) {
+// //   //   this.dian = dian
+// //   // };
+// //   static getName(str: number): string {
+// //     return '吊用了getname的' + str
+// //   }
+// //   get est() {
+// //     return 'getValue'
+// //   }
+// //   set est(val) {
+// //     console.log('has no admin');
+// //   }
+// // }
+// // let getQuan = new quanjia()
+// // // console.log(quanjia.getName(1));
+// // console.log(quanjia.est)
+// class MyClass {
+//   constructor() {
+//     // ...
+//   }
+//   get prop() {
+//     return 'getter';
+//   }
+//   set prop(value) {
+//     console.log('setter: ' + value);
+//   }
+// }
+// let inst = new MyClass();
+// inst.prop = '12';
+// // setter: 123
+// console.log(inst.prop);
+// // 'getter'
+var person = /** @class */ (function () {
+    function person() {
+        this.protectedName = 'protectName';
+        this.isName = 'personName';
+        this.proName = 'private';
     }
-    get prop() {
-        return 'getter';
+    return person;
+}());
+var cc = new person();
+// console.log(cc.proName);
+console.log(cc.isName);
+var getAll = /** @class */ (function () {
+    function getAll(hobby) {
+        this.hobby = hobby;
     }
-    set prop(value) {
-        console.log('setter: ' + value);
+    return getAll;
+}());
+var title1;
+(function (title1) {
+    var cc = /** @class */ (function () {
+        function cc() {
+            this.nickName = 'cc';
+        }
+        return cc;
+    }());
+    title1.cc = cc;
+})(title1 || (title1 = {}));
+var tom = {
+    name: 'Tom',
+    age: 25
+};
+function getLength(something) {
+    if (something.length) {
+        return something.length;
+    }
+    else {
+        return something.toString().length;
     }
 }
-let inst = new MyClass();
-inst.prop = '12';
-// setter: 123
-console.log(inst.prop);
-// 'getter'

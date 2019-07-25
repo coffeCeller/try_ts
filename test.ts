@@ -140,6 +140,57 @@
 
 // // 'getter'
 
+class person {
+  protected protectedName: string = 'protectName'
+  isName: string = 'personName';
+  private proName: string = 'private'
+}
+let cc = new person()
+// console.log(cc.proName);
+console.log(cc.isName);
+// console.log(cc.protectedName);
+
+interface jieKou {
+  hobby: string
+}
+
+class getAll implements jieKou {
+  hobby: string;
+  constructor(hobby: string) {
+    this.hobby = hobby
+  }
+}
+
+namespace title1 {
+  export class cc {
+    nickName: string = 'cc';
+  }
+  export interface tt {
+    firstName: string,
+    lastName: string,
+    sayHi: () => string
+  }
+}
+
+interface Person {
+  name: string;
+  age?: number;
+  // [propName: string]: string;
+}
+
+let tom: Person = {
+  name: 'Tom',
+  age: 25,
+  // gender: 'male'
+};
+
+function getLength(something: number | string): number {
+  if ((<string>something).length) {
+    return (<string>something).length
+  } else {
+    return <number>something.toString().length
+  }
+}
 
 
 
